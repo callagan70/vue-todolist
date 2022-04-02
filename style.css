@@ -1,0 +1,32 @@
+.text{
+    font-size: 3em;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.field{
+    text-align: center;
+    margin: 0px auto;
+}
+
+.field span{
+    margin-left: 1em;
+}
+
+#lista{
+    width: 60%;
+    height: fit-content;
+    background-color: bisque;
+    margin: 0px auto;
+}
+
+.cross{
+    color: red;
+    margin-right: 20px;
+}
+
+.list{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1em;
+}
