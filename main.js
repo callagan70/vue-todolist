@@ -5,15 +5,15 @@ var app = new Vue(
         lista: [
             {
                 'project': 'Portare fuori il cane',
-                'progress' : true,
+                'progress' : false,
             },
             {
                 'project': 'Fare colazione',
-                'progress' : true,
+                'progress' : false,
             },
             {
                 'project': 'Fare la spesa',
-                'progress' : true,
+                'progress' : false,
             }
         ]
   },
@@ -23,25 +23,29 @@ var app = new Vue(
 
 
   methods:{
+
     removeLista: function(indexLista){
         this.lista.splice(indexLista,1);
     },
     
     addDuty: function(){
+
         let newDutyObj = {
             'project': this.newDuty,
-            'progress' : true,  
-        }
-        
+            'progress' : false,}
+
         this.lista.push(newDutyObj)
-    
+        this.newDuty = ' ' },
 
+        fatto: function(element){
+
+            if(element.progress == true){
+                impegni.progress = false
+            }
+            else{
+                element.progress = false
+            }
     }
-
-
-
   }
-}
-
-)
+})
 

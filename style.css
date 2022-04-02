@@ -22,6 +22,7 @@ body{
     height: fit-content;
     background-color: bisque;
     margin: 0px auto;
+    padding: 1em;
 }
 
 .cross{
@@ -40,4 +41,11 @@ body{
     margin: 0px auto;
     text-align: center;
     font-size: 2em;
+}
+
+.fatto{
+    text-decoration: line-through;
+
+
+
 }

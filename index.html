@@ -30,8 +30,14 @@
     <div id="lista" v-if="lista.length > 0">
         <ul>
             <li class="list" v-for="(impegni, index) in lista">
-                <span>{{ impegni.project }}</span>
+
+                <span
+                    :class="(impegni.progress ==  true) ? 'fatto' : ' ' "
+                    @click="fatto(impegni)"                
+                >{{ impegni.project }}</span>
+
                 <span @click="removeLista(index)"><i class="fa-solid fa-xmark cross"></i></span>
+
             </li>
         </ul>
     </div>
