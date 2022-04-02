@@ -25,11 +25,21 @@ var app = new Vue(
   methods:{
     removeLista: function(indexLista){
         this.lista.splice(indexLista,1);
+    },
+    
+    addDuty: function(){
+        let newDutyObj = {
+            'project': this.newDuty,
+            'progress' : true,  
+        }
         
-
-
+        this.lista.push(newDutyObj)
+    
 
     }
+
+
+
   }
 }
 

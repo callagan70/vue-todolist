@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>VueJs Carosello</title>
+    <title>VueJs ToDo List</title>
 </head>
 <body>
     <h1 class="text">ToDo List</h1>
@@ -16,29 +16,28 @@
 <div id="root">
     
     <div class="field">
-        <input type="text">
-        <span>Inserisci il da farsi</span>
-    </div>
-    <br>
-    <div id="lista">
-        <span>Non ci tieni impegni, fai quello che vuoi !</span>
+        <input type="text"
+            v-model="newDuty"
+            @keyup.enter="addDuty"
+        >
 
+        <span @click="addDuty">Inserisci il da farsi</span>
+    
+    </div>
+
+    <br>
+    
+    <div id="lista" v-if="lista.length > 0">
         <ul>
             <li class="list" v-for="(impegni, index) in lista">
                 <span>{{ impegni.project }}</span>
                 <span @click="removeLista(index)"><i class="fa-solid fa-xmark cross"></i></span>
             </li>
         </ul>
-
-
-
-
-
-
-
     </div>
-
-
+    <div v-else="" class="noduty">
+        <span >Non ci tieni impegni, fai quello che vuoi !</span>
+    </div>
 
 
 
