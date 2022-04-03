@@ -21,7 +21,7 @@
             @keyup.enter="addDuty"
         >
 
-        <span @click="addDuty">Inserisci il da farsi</span>
+        <span @click="addDuty" class="bottone">Inserisci il da farsi</span>
     
     </div>
 
@@ -33,8 +33,11 @@
 
                 <span
                     :class="(impegni.progress ==  true) ? 'fatto' : ' ' "
-                    @click="fatto(impegni)"                
-                >{{ impegni.project }}</span>
+                    @click="done(impegni)"
+                    class="sopra"               
+                >
+                    {{ impegni.project }}
+                </span>
 
                 <span @click="removeLista(index)"><i class="fa-solid fa-xmark cross"></i></span>
 

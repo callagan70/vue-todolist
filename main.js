@@ -18,10 +18,6 @@ var app = new Vue(
         ]
   },
 
-
-
-
-
   methods:{
 
     removeLista: function(indexLista){
@@ -37,13 +33,13 @@ var app = new Vue(
         this.lista.push(newDutyObj)
         this.newDuty = ' ' },
 
-        fatto: function(element){
+    done: function(element){
 
-            if(element.progress == true){
-                impegni.progress = false
+        if (element.progress == true){
+            element.progress = false
             }
-            else{
-                element.progress = false
+        else{
+                element.progress = true
             }
     }
   }

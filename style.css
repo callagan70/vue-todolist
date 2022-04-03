@@ -45,7 +45,19 @@ body{
 
 .fatto{
     text-decoration: line-through;
+    color: red;
+}
 
+.bottone{
+    background-color: black;
+    color: white;
+    padding: 5px 10px 5px 10px;
+}
 
+.bottone:hover{
+    color: red;
+}
 
+.sopra:hover{
+    color:red;
 }
